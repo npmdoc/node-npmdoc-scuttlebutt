@@ -1,0 +1,1146 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/dominictarr/scuttlebutt"
+
+    >scuttlebutt (v5.6.14)</a>
+</h1>
+<h4>replicate data via scuttlebutt protocol</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt">module scuttlebutt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>events
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.filter">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>filter
+            <span class="apidocSignatureSpan">(update, sources)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>model
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.super_">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.timestamp">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>timestamp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.updateIsRecent">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>updateIsRecent
+            <span class="apidocSignatureSpan">(update, sources)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">scuttlebutt.</span>events.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">scuttlebutt.</span>model.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">scuttlebutt.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt.events">module scuttlebutt.events</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.events">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>events
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.super_">
+            function <span class="apidocSignatureSpan">scuttlebutt.events.</span>super_
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt.events.prototype">module scuttlebutt.events.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.prototype.applyUpdate">
+            function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>applyUpdate
+            <span class="apidocSignatureSpan">(update)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.prototype.emit">
+            function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>emit
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.prototype.history">
+            function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>history
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.events.prototype.on">
+            function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>on
+            <span class="apidocSignatureSpan">(event, listener)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt.model">module scuttlebutt.model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.model">
+            function <span class="apidocSignatureSpan">scuttlebutt.</span>model
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.super_">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.</span>super_
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt.model.prototype">module scuttlebutt.model.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.applyUpdate">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>applyUpdate
+            <span class="apidocSignatureSpan">(update)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.each">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>each
+            <span class="apidocSignatureSpan">(iter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.forEach">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(iter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.get">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>get
+            <span class="apidocSignatureSpan">(k)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.history">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>history
+            <span class="apidocSignatureSpan">(sources)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.keys">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>keys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.set">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>set
+            <span class="apidocSignatureSpan">(k, v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.model.prototype.toJSON">
+            function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt.util">module scuttlebutt.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.util.createId">
+            function <span class="apidocSignatureSpan">scuttlebutt.util.</span>createId
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.util.filter">
+            function <span class="apidocSignatureSpan">scuttlebutt.util.</span>filter
+            <span class="apidocSignatureSpan">(update, sources)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.util.protoIsIllegal">
+            function <span class="apidocSignatureSpan">scuttlebutt.util.</span>protoIsIllegal
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.util.sort">
+            function <span class="apidocSignatureSpan">scuttlebutt.util.</span>sort
+            <span class="apidocSignatureSpan">(hist)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.util.validUpdate">
+            function <span class="apidocSignatureSpan">scuttlebutt.util.</span>validUpdate
+            <span class="apidocSignatureSpan">(t, update)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt" id="apidoc.module.scuttlebutt">module scuttlebutt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events" id="apidoc.element.scuttlebutt.events">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>events
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ReliableEventEmitter(opts) {
+  if(!(this instanceof ReliableEventEmitter)) return new ReliableEventEmitter(opts)
+  Scuttlebutt.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.filter" id="apidoc.element.scuttlebutt.filter">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>filter
+        <span class="apidocSignatureSpan">(update, sources)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (update, sources) {
+  var ts = update[1]
+  var source = update[2]
+  return (!sources || !sources[source] || sources[source] &#x3c; ts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+outer.on(&#x27;sync&#x27;, function () {
+  process.nextTick(function () {
+    d._end()
+  })
+})
+  }
+  function onUpdate (update) { //value, source, ts
+if(!validate(update) || !u.<span class="apidocCodeKeywordSpan">filter</span>(update, sources))
+  return
+
+d._data(update)
+
+//really, this should happen before emitting.
+var ts = update[1]
+var source = update[2]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model" id="apidoc.element.scuttlebutt.model">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>model
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Model(opts) {
+  if(!(this instanceof Model)) return new Model(opts)
+  Scuttlebutt.call(this, opts)
+  this.store = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.super_" id="apidoc.element.scuttlebutt.super_">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.timestamp" id="apidoc.element.scuttlebutt.timestamp">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>timestamp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function timestamp() {
+<span class="apidocCodeCommentSpan">  /**
+  Returns NOT an accurate representation of the current time.
+  Since js only measures time as ms, if you call `Date.now()`
+  twice quickly, it&#x27;s possible to get two identical time stamps.
+  This function guarantees unique but maybe inaccurate results
+  on each call.
+  **/
+</span>  //uncomment this wen
+  var time = Date.now()
+  //time = ~~ (time / 1000)
+  //^^^uncomment when testing...
+
+  /**
+  If time returned is same as in last call, adjust it by
+  adding a number based on the counter.
+  Counter is incremented so that next call get&#x27;s adjusted properly.
+  Because floats have restricted precision,
+  may need to step past some values...
+  **/
+  if (_last === time)  {
+    do {
+      adjusted = time + ((_count++) / (_count + 999))
+    } while (adjusted === _adjusted)
+    _adjusted = adjusted
+  }
+  // If last time was different reset timer back to `1`.
+  else {
+    _count = 1
+    adjusted = time
+  }
+  _adjusted = adjusted
+  _last = time
+  return adjusted
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.updateIsRecent" id="apidoc.element.scuttlebutt.updateIsRecent">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>updateIsRecent
+        <span class="apidocSignatureSpan">(update, sources)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateIsRecent = function (update, sources) {
+  var ts = update[1]
+  var source = update[2]
+  return (!sources || !sources[source] || sources[source] &#x3c; ts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt.events" id="apidoc.module.scuttlebutt.events">module scuttlebutt.events</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.events" id="apidoc.element.scuttlebutt.events.events">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>events
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ReliableEventEmitter(opts) {
+  if(!(this instanceof ReliableEventEmitter)) return new ReliableEventEmitter(opts)
+  Scuttlebutt.call(this, opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.super_" id="apidoc.element.scuttlebutt.events.super_">
+        function <span class="apidocSignatureSpan">scuttlebutt.events.</span>super_
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scuttlebutt(opts) {
+
+  if(!(this instanceof Scuttlebutt)) return new Scuttlebutt(opts)
+  var id = &#x27;string&#x27; === typeof opts ? opts : opts &#x26;&#x26; opts.id
+  this.sources = {}
+  this.setMaxListeners(Number.MAX_VALUE)
+  //count how many other instances we are replicating to.
+  this._streams = 0
+  if(opts &#x26;&#x26; opts.sign &#x26;&#x26; opts.verify) {
+    this.setId(opts.id || opts.createId())
+    this._sign   = opts.sign
+    this._verify = opts.verify
+  } else {
+    this.setId(id || u.createId())
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt.events.prototype" id="apidoc.module.scuttlebutt.events.prototype">module scuttlebutt.events.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.prototype.applyUpdate" id="apidoc.element.scuttlebutt.events.prototype.applyUpdate">
+        function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>applyUpdate
+        <span class="apidocSignatureSpan">(update)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyUpdate = function (update) {
+  var key = update[0][0]
+  this.events = this.events || {}
+  this.events[key] = this.events[key] || []
+  this.events[key].push(update)
+  //emit the event.
+  emit.apply(this, update[0])
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if(err)
+    return emit.call(self, &#x27;error&#x27;, err)
+
+  if(!verified)
+    return emit.call(self, &#x27;unverified_data&#x27;, update)
+
+  if(self.<span class="apidocCodeKeywordSpan">applyUpdate</span>(update))
+    emit.call(self, &#x27;_update&#x27;, update) //write to stream.
+}
+
+if(source !== this.id) {
+  if(this._verify)
+    this._verify(update, didVerification)
+  else
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.prototype.emit" id="apidoc.element.scuttlebutt.events.prototype.emit">
+        function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>emit
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (event) {
+  if(event === &#x27;__proto__&#x27;)
+    throw new Error(&#x27;__proto__ is illegal event name&#x27;)
+  var args = [].slice.call(arguments)
+  if(event == &#x27;newListener&#x27;)
+    return emit.apply(this, args)
+  return this.localUpdate(args)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var tail = opts.tail !== false //default to tail=true
+
+  function start (data) {
+//when the digest is recieved from the other end,
+//send the history.
+//merge with the current list of sources.
+if (!data || !data.clock) {
+    d.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;error&#x27;);
+    return d._end()
+}
+
+sources = data.clock
+
+i.each(self.history(sources), function (data) {d._data(data)})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.prototype.history" id="apidoc.element.scuttlebutt.events.prototype.history">
+        function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>history
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">history = function (filter) {
+  var self = this
+  var h = []
+  this.events = this.events || {}
+  each(this.events, function (es) {
+    each(es, function (e) {
+      if(u.filter(e, filter))
+        h.push(e)
+    })
+  })
+  return u.sort(h)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!data || !data.clock) {
+    d.emit(&#x27;error&#x27;);
+    return d._end()
+}
+
+sources = data.clock
+
+i.each(self.<span class="apidocCodeKeywordSpan">history</span>(sources), function (data) {d._data(data)})
+
+//the _update listener must be set after the history is queued.
+//otherwise there is a race between the first client message
+//and the next update (which may come in on another stream)
+//this problem will probably not be encountered until you have
+//thousands of scuttlebutts.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.events.prototype.on" id="apidoc.element.scuttlebutt.events.prototype.on">
+        function <span class="apidocSignatureSpan">scuttlebutt.events.prototype.</span>on
+        <span class="apidocSignatureSpan">(event, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (event, listener) {
+  if(event === &#x27;__proto__&#x27;)
+    throw new Error(&#x27;__proto__ is invalid event&#x27;)
+  return on.call(this, event, listener)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+** Any stream that gets parsed should have an error listener! **
+
+``` js
+net.createServer(function (stream) {
+  var ms = m.createStream()
+  stream.pipe(ms).pipe(stream)
+  ms.<span class="apidocCodeKeywordSpan">on</span>(&#x27;error&#x27;, function () {
+    stream.destroy()
+  })
+  stream.on(&#x27;error&#x27;, function () {
+    ms.destroy()
+  })
+}).listen(9999)
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt.model" id="apidoc.module.scuttlebutt.model">module scuttlebutt.model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.model" id="apidoc.element.scuttlebutt.model.model">
+        function <span class="apidocSignatureSpan">scuttlebutt.</span>model
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Model(opts) {
+  if(!(this instanceof Model)) return new Model(opts)
+  Scuttlebutt.call(this, opts)
+  this.store = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.super_" id="apidoc.element.scuttlebutt.model.super_">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.</span>super_
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scuttlebutt(opts) {
+
+  if(!(this instanceof Scuttlebutt)) return new Scuttlebutt(opts)
+  var id = &#x27;string&#x27; === typeof opts ? opts : opts &#x26;&#x26; opts.id
+  this.sources = {}
+  this.setMaxListeners(Number.MAX_VALUE)
+  //count how many other instances we are replicating to.
+  this._streams = 0
+  if(opts &#x26;&#x26; opts.sign &#x26;&#x26; opts.verify) {
+    this.setId(opts.id || opts.createId())
+    this._sign   = opts.sign
+    this._verify = opts.verify
+  } else {
+    this.setId(id || u.createId())
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt.model.prototype" id="apidoc.module.scuttlebutt.model.prototype">module scuttlebutt.model.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.applyUpdate" id="apidoc.element.scuttlebutt.model.prototype.applyUpdate">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>applyUpdate
+        <span class="apidocSignatureSpan">(update)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyUpdate = function (update) {
+  var key = update[0][0]
+  if(&#x27;__proto__&#x27; === key) return u.protoIsIllegal(this)
+  //ignore if we already have a more recent value
+
+  if(&#x27;undefined&#x27; !== typeof this.store[key]
+    &#x26;&#x26; this.store[key][1] &#x3e; update[1])
+    return this.emit(&#x27;_remove&#x27;, update)
+
+  if(this.store[key]) this.emit(&#x27;_remove&#x27;, this.store[key])
+
+  this.store[key] = update
+
+  this.emit.apply(this, [&#x27;update&#x27;].concat(update))
+  this.emit(&#x27;change&#x27;, key, update[0][1])
+  this.emit(&#x27;change:&#x27;+key, update[0][1])
+
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if(err)
+    return emit.call(self, &#x27;error&#x27;, err)
+
+  if(!verified)
+    return emit.call(self, &#x27;unverified_data&#x27;, update)
+
+  if(self.<span class="apidocCodeKeywordSpan">applyUpdate</span>(update))
+    emit.call(self, &#x27;_update&#x27;, update) //write to stream.
+}
+
+if(source !== this.id) {
+  if(this._verify)
+    this._verify(update, didVerification)
+  else
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.each" id="apidoc.element.scuttlebutt.model.prototype.each">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>each
+        <span class="apidocSignatureSpan">(iter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">each = function (iter) {
+  for (var k in this.store)
+    iter(this.store[k][0][1], k, this.store)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!data || !data.clock) {
+    d.emit(&#x27;error&#x27;);
+    return d._end()
+}
+
+sources = data.clock
+
+i.<span class="apidocCodeKeywordSpan">each</span>(self.history(sources), function (data) {d._data(data)})
+
+//the _update listener must be set after the history is queued.
+//otherwise there is a race between the first client message
+//and the next update (which may come in on another stream)
+//this problem will probably not be encountered until you have
+//thousands of scuttlebutts.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.forEach" id="apidoc.element.scuttlebutt.model.prototype.forEach">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(iter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (iter) {
+  for (var k in this.store)
+    iter(this.store[k][0][1], k, this.store)
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.get" id="apidoc.element.scuttlebutt.model.prototype.get">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>get
+        <span class="apidocSignatureSpan">(k)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (k) {
+  if(k===&#x27;__proto__&#x27;) return u.protoIsIllegal(this)
+  if(this.store[k])
+    return this.store[k][0][1]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  })
+  return u.sort(h)
+}
+
+m.toJSON = function () {
+  var o = {}, notNull = false
+  for (var k in this.store) {
+    var v = this.<span class="apidocCodeKeywordSpan">get</span>(k)
+    if(v != null)
+      o[k] = this.get(k)
+  }
+  return o
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.history" id="apidoc.element.scuttlebutt.model.prototype.history">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>history
+        <span class="apidocSignatureSpan">(sources)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">history = function (sources) {
+  var self = this
+  var h = []
+  each(this.store, function (e) {
+    if(u.filter(e, sources))
+      h.push(e)
+  })
+  return u.sort(h)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!data || !data.clock) {
+    d.emit(&#x27;error&#x27;);
+    return d._end()
+}
+
+sources = data.clock
+
+i.each(self.<span class="apidocCodeKeywordSpan">history</span>(sources), function (data) {d._data(data)})
+
+//the _update listener must be set after the history is queued.
+//otherwise there is a race between the first client message
+//and the next update (which may come in on another stream)
+//this problem will probably not be encountered until you have
+//thousands of scuttlebutts.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.keys" id="apidoc.element.scuttlebutt.model.prototype.keys">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>keys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keys = function () {
+  var a = []
+  for (var k in this.store)
+    a.push(k)
+  return a
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.set" id="apidoc.element.scuttlebutt.model.prototype.set">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>set
+        <span class="apidocSignatureSpan">(k, v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (k, v) {
+  if(k===&#x27;__proto__&#x27;) return u.protoIsIllegal(this)
+  this.localUpdate([k, v])
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var Model = require(&#x27;scuttlebutt/model&#x27;)
+
+var a = new Model()
+var b = new Model()
+
+a.<span class="apidocCodeKeywordSpan">set</span>(key, value)
+
+b.on(&#x27;update&#x27;, console.log)
+
+var s = a.createStream()
+s.pipe(b.createStream()).pipe(s)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.model.prototype.toJSON" id="apidoc.element.scuttlebutt.model.prototype.toJSON">
+        function <span class="apidocSignatureSpan">scuttlebutt.model.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  var o = {}, notNull = false
+  for (var k in this.store) {
+    var v = this.get(k)
+    if(v != null)
+      o[k] = this.get(k)
+  }
+  return o
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.scuttlebutt.util" id="apidoc.module.scuttlebutt.util">module scuttlebutt.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.util.createId" id="apidoc.element.scuttlebutt.util.createId">
+        function <span class="apidocSignatureSpan">scuttlebutt.util.</span>createId
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createId = function () {
+  return [1,1,1].map(function () {
+    return Math.random().toString(16).substring(2).toUpperCase()
+  }).join(&#x27;&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if(!(this instanceof Scuttlebutt)) return new Scuttlebutt(opts)
+  var id = &#x27;string&#x27; === typeof opts ? opts : opts &#x26;&#x26; opts.id
+  this.sources = {}
+  this.setMaxListeners(Number.MAX_VALUE)
+  //count how many other instances we are replicating to.
+  this._streams = 0
+  if(opts &#x26;&#x26; opts.sign &#x26;&#x26; opts.verify) {
+    this.setId(opts.id || opts.<span class="apidocCodeKeywordSpan">createId</span>())
+    this._sign   = opts.sign
+    this._verify = opts.verify
+  } else {
+    this.setId(id || u.createId())
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.util.filter" id="apidoc.element.scuttlebutt.util.filter">
+        function <span class="apidocSignatureSpan">scuttlebutt.util.</span>filter
+        <span class="apidocSignatureSpan">(update, sources)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (update, sources) {
+  var ts = update[1]
+  var source = update[2]
+  return (!sources || !sources[source] || sources[source] &#x3c; ts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+outer.on(&#x27;sync&#x27;, function () {
+  process.nextTick(function () {
+    d._end()
+  })
+})
+  }
+  function onUpdate (update) { //value, source, ts
+if(!validate(update) || !u.<span class="apidocCodeKeywordSpan">filter</span>(update, sources))
+  return
+
+d._data(update)
+
+//really, this should happen before emitting.
+var ts = update[1]
+var source = update[2]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.util.protoIsIllegal" id="apidoc.element.scuttlebutt.util.protoIsIllegal">
+        function <span class="apidocSignatureSpan">scuttlebutt.util.</span>protoIsIllegal
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">protoIsIllegal = function (s) {
+  s.emit(&#x27;invalid&#x27;, new Error(&#x27;&#x22;__proto__&#x22; is illegal property name&#x27;))
+  return null
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Scuttlebutt.call(this, opts)
+this.store = {}
+}
+
+var m = Model.prototype
+
+m.set = function (k, v) {
+if(k===&#x27;__proto__&#x27;) return u.<span class="apidocCodeKeywordSpan">protoIsIllegal</span>(this)
+this.localUpdate([k, v])
+return this
+}
+
+
+m.get = function (k) {
+if(k===&#x27;__proto__&#x27;) return u.protoIsIllegal(this)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.util.sort" id="apidoc.element.scuttlebutt.util.sort">
+        function <span class="apidocSignatureSpan">scuttlebutt.util.</span>sort
+        <span class="apidocSignatureSpan">(hist)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort = function (hist) {
+  return hist.sort(function (a, b) {
+    //sort by timestamps, then ids.
+    //there should never be a pair with equal timestamps
+    //and ids.
+    return a[1] - b[1] || (a[2] &#x3e; b[2] ? 1 : -1)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.events = this.events || {}
+  each(this.events, function (es) {
+    each(es, function (e) {
+      if(u.filter(e, filter))
+        h.push(e)
+    })
+  })
+  return u.<span class="apidocCodeKeywordSpan">sort</span>(h)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.util.validUpdate" id="apidoc.element.scuttlebutt.util.validUpdate">
+        function <span class="apidocSignatureSpan">scuttlebutt.util.</span>validUpdate
+        <span class="apidocSignatureSpan">(t, update)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validUpdate = function (t, update) {
+  if(!Array.isArray(update)) return invalidUpdate(t)
+  if(&#x27;string&#x27; !== typeof update[1] || &#x27;number&#x27; !== typeof update[2])
+    return invalidUpdate(t)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
