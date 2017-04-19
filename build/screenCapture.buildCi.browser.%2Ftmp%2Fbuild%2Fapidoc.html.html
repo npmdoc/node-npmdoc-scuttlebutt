@@ -47,12 +47,21 @@
 }
 </style>
 <h1>api documentation for
-    <a href="https://github.com/dominictarr/scuttlebutt">scuttlebutt (v5.6.14)</a>
+    <a href="https://github.com/dominictarr/scuttlebutt">scuttlebutt (v5.6.15)</a>
 </h1>
 <h4>replicate data via scuttlebutt protocol</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.scuttlebutt">module scuttlebutt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.scuttlebutt.scuttlebutt">
+            function <span class="apidocSignatureSpan"></span>scuttlebutt
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
 
         <li>
 
@@ -341,6 +350,34 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.scuttlebutt" id="apidoc.module.scuttlebutt">module scuttlebutt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.scuttlebutt.scuttlebutt" id="apidoc.element.scuttlebutt.scuttlebutt">
+        function <span class="apidocSignatureSpan"></span>scuttlebutt
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scuttlebutt(opts) {
+
+  if(!(this instanceof Scuttlebutt)) return new Scuttlebutt(opts)
+  var id = 'string' === typeof opts ? opts : opts &amp;&amp; opts.id
+  this.sources = {}
+  this.setMaxListeners(Number.MAX_VALUE)
+  //count how many other instances we are replicating to.
+  this._streams = 0
+  if(opts &amp;&amp; opts.sign &amp;&amp; opts.verify) {
+    this.setId(opts.id || opts.createId())
+    this._sign   = opts.sign
+    this._verify = opts.verify
+  } else {
+    this.setId(id || u.createId())
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>

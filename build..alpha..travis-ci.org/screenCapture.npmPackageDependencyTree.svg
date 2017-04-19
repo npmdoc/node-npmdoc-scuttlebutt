@@ -1,11 +1,13 @@
-<svg height="126" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="126" fill="#555" width="720"></rect>
+<svg height="158" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="158" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">1 megabytes</tspan>
-<tspan x="10" y="42">└─┬ scuttlebutt@5.6.14 </tspan>
-<tspan x="10" y="58">  ├── duplex@1.0.0 </tspan>
-<tspan x="10" y="74">  ├── iterate@0.1.0 </tspan>
-<tspan x="10" y="90">  ├── monotonic-timestamp@0.0.9 </tspan>
-<tspan x="10" y="106">  └── stream-serializer@1.1.2</tspan>
+<tspan x="10" y="26">1 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ scuttlebutt@5.6.15 </tspan>
+<tspan x="10" y="90">  ├── duplex@1.0.0 </tspan>
+<tspan x="10" y="106">  ├── iterate@0.1.0 </tspan>
+<tspan x="10" y="122">  ├── monotonic-timestamp@0.0.9 </tspan>
+<tspan x="10" y="138">  └── stream-serializer@1.1.2</tspan>
 </text>
 </svg>
